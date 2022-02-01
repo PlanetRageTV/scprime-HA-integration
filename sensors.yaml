@@ -1,0 +1,63 @@
+- platform: rest
+  resource: https://api.siacentral.com/v2/scprime/hosts/[SCPRIMEHOSTIP]:4282
+  method: GET
+  name: "SCP Host Address"
+  value_template: '{{value_json.host.net_address}}'
+  scan_interval: 600
+
+- platform: rest
+  resource: https://api.siacentral.com/v2/scprime/hosts/[SCPRIMEHOSTIP]:4282
+  method: GET
+  name: "SCP Host Version"
+  value_template: '{{value_json.host.version}}'
+  scan_interval: 600
+
+- platform: rest
+  resource: https://api.siacentral.com/v2/scprime/hosts/[SCPRIMEHOSTIP]:4282
+  method: GET
+  name: "SCP Host Uptime"
+  value_template: '{{value_json.host.estimated_uptime}}'
+  scan_interval: 600
+
+- platform: rest
+  resource: https://api.siacentral.com/v2/scprime/hosts/[SCPRIMEHOSTIP]:4282
+  method: GET
+  name: "SCP Host Online"
+  value_template: '{{value_json.host.online}}'
+  scan_interval: 600
+
+- platform: rest
+  resource: https://api.siacentral.com/v2/scprime/hosts/[SCPRIMEHOSTIP]:4282
+  method: GET
+  name: "SCP Host Total Storage TB"
+  value_template: '{{(value_json.host.settings.total_storage / 1000000000000) | round(1)}}'
+  scan_interval: 600
+
+- platform: rest
+  resource: https://api.siacentral.com/v2/scprime/hosts/[SCPRIMEHOSTIP]:4282
+  method: GET
+  name: "SCP Host Used Storage GB"
+  value_template: '{{((value_json.host.settings.total_storage - value_json.host.settings.remaining_storage )/ 1000000000) | round(2)}}'
+  scan_interval: 600
+
+- platform: rest
+  resource: https://api.siacentral.com/v2/scprime/hosts/[SCPRIMEHOSTIP]:4282
+  method: GET
+  name: "SCP Host Blockheight"
+  value_template: '{{value_json.host.price_table.hostblockheight}}'
+  scan_interval: 600
+
+- platform: rest
+  resource: https://api.siacentral.com/v2/scprime/hosts/[SCPRIMEHOSTIP]:4282
+  method: GET
+  name: "SCP Host Online Since"
+  value_template: '{{value_json.host.first_seen_timestamp}}'
+  scan_interval: 600
+
+- platform: rest
+  resource: https://api.siacentral.com/v2/scprime/market/exchange-rate
+  method: GET
+  name: "SCP Exchange Rate USD"
+  value_template: '{{value_json.scprimecoin.usd}}'
+  scan_interval: 600
+
