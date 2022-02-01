@@ -5,7 +5,7 @@ With the help of the pre-configured RESTful Sensors in the sensors.yaml File you
 
 The Information is gathered using the RESTful API from Siacentral.com.
 
-Please not that within the sensors.yaml you have to change [hostname] for your hosts IP or DDNS Name with which it is announced (no local IPs!).
+Please not that within the sensors.yaml you have to change [SCPRIMEHOSTIP] for your hosts IP or DDNS Name with which it is announced (no local IPs!).
 
 To integrate the sensors to your home assistant installation simply upload the sensors.yaml to the same folder as your configuration.yaml is in your home assistant installation.
 Then you need to load the custom sensors within your configuration.yaml.
@@ -16,4 +16,9 @@ sensor: !include sensors.yaml
 
 at the end. Then check / reload configuration for the sensors to be loaded.
 
-Currently the sensor refreshes the data every 600 seconds (10 Minutes), to change that simply edit the 
+Currently the sensor refreshes the data every 600 seconds (10 Minutes), to change that simply edit the scan_interval in the sensors.yaml. The value is in seconds.
+
+Use this integration on your own risk, I am not responsible for any problems or errors or if your house explodes.
+
+Have fun!
+
