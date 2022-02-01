@@ -40,3 +40,6 @@ Have fun!
 "SCP Host Online Since" - First host announcement.
 
 "SCP Exchange Rate USD" - Current exchange Rate of SCPrimecoin to USD
+
+![image](https://user-images.githubusercontent.com/54498007/152007558-1356cf46-29ff-4e1e-a49a-b555fa7d1314.png)
+
