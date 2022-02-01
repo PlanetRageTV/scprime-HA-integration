@@ -22,3 +22,21 @@ Use this integration on your own risk, I am not responsible for any problems or 
 
 Have fun!
 
+#The following Sensors are created
+"SCP Host Address" - Address the host is announced with
+
+"SCP Host Version" - Currently running version of the SCPrime Daemon on the host
+
+"SCP Host Uptime" - Reported Uptime Value
+
+"SCP Host Online" - Boolean if host is online
+
+"SCP Host Total Storage TB" - Total Host Storage in TB (decimal!)
+ 
+"SCP Host Used Storage GB" - Used Host Storage in GB (decimal!)
+
+"SCP Host Blockheight" - Host reported Blockheight
+
+"SCP Host Online Since" - First host announcement.
+
+"SCP Exchange Rate USD" - Current exchange Rate of SCPrimecoin to USD
